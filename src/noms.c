@@ -20,6 +20,7 @@
 #include <pebble.h>
 #include <pebble_app_info.h>
 #include <pebble_fonts.h>
+#include "QTPlus.h"
 
 static Window *window;
 
@@ -168,6 +169,8 @@ static void window_unload(Window *window) {
 }
 
 static void init(void) {
+	qtp_conf = QTP_K_SHOW_TIME | QTP_K_SHOW_WEATHER | QTP_K_AUTOHIDE | QTP_K_DEGREES_F | QTP_K_INVERT;
+	qtp_setup();
     window = window_create();
     window_set_window_handlers(window, (WindowHandlers) {
         .load = window_load,
@@ -179,6 +182,7 @@ static void init(void) {
 }
 
 static void deinit(void) {
+	qtp_app_deinit();
     tick_timer_service_unsubscribe();
     window_stack_remove(window, false);
     window_destroy(window);

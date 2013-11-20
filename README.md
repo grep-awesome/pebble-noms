@@ -3,6 +3,8 @@ _by Fazli Sapuan_
 
 Watch face "noms" the time every minute.
 
+**[QuickTap+](https://github.com/grep-awesome/QuickTapPlus) has been added to this fork** to provide Weather, Bluetooth, and Battery info.
+
 [![ScreenShot](http://i.imgur.com/8EktpNe.gif)](http://imgur.com/8EktpNe)
 
 ###[Download & Changelog](https://github.com/Fuzzie360/pebble-noms/releases)
